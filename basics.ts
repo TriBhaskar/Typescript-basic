@@ -77,3 +77,27 @@ function insertAtBeginning<T>(array: T[], value: T) {
 const demoArray = [1, 2, 3];
 const updatedArray = insertAtBeginning(demoArray, -1); //[-1,1,2,3]
 const stringArray = insertAtBeginning(["a", "b", "c"], "z"); //["z","a","b","c"]
+
+//classes & access modifiers
+class Student1 {
+  //name: string; //public by default
+  //private age: number;
+  //readonly rollno: number;
+
+  constructor(
+    public name: string,
+    private age: number,
+    readonly rollno: number
+  ) {
+    //this.name = name;
+    //this.age = age;
+    //this.rollno = rollno;
+  }
+
+  printStudent() {
+    return `Name: ${this.name}, Age: ${this.age}, Rollno: ${this.rollno}`;
+  }
+}
+
+const student = new Student1("Bhaskar", 30, 1);
+console.log(student.printStudent());
