@@ -46,3 +46,15 @@ let course = "React - The Complete Guide";
 //union types - more than one type is possible
 let courseName: string | number = "React - The Complete Guide";
 courseName = 1234;
+
+//type aliases - create your own types
+type Student = {
+  name: string;
+  rollno: number;
+};
+
+let student1: Student[];
+student1 = [
+  { name: "Bhaskar", rollno: 1 },
+  { name: "Sachin", rollno: 2 },
+];
